@@ -1,0 +1,302 @@
+@use "../global" as *;
+@use "sass:map";
+
+.p-cta-02 {
+  margin-top: 41px;
+  @include mq("sm") {
+    margin-top: 39px;
+  }
+}
+
+.p-cta-02__deco-top {
+  width: 100vw;
+  height: 50px;
+  background: url(/img/cta-bg-wave.png) no-repeat center center/cover;
+  @include mq("sm") {
+    height: 16px;
+    background: url(/img/cta-bg-wave__sp.png) no-repeat center center/cover;
+  }
+}
+
+.p-cta-02__outer {
+  background-color: $color-accent_03;
+  position: relative;
+  padding-top: 34.5px;
+  padding-bottom: 96px;
+  @include mq("sm") {
+    padding-top: 53px;
+    padding-bottom: 120px;
+  }
+}
+
+.p-cta-02__inner {
+  max-width: 926px;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include mq("sm") {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.p-cta-02__title {
+  position: relative;
+  @include mq("sm") {
+    margin-left: -2px;
+  }
+  &::before {
+    content: "";
+    width: 33px;
+    height: 53px;
+    position: absolute;
+    background: url(/img/icon-title-deco_left.png) no-repeat center center / cover;
+    left: -48px;
+    top: 2px;
+    @include mq("md") {
+      top: 30px;
+    }
+    @include mq("sm") {
+      left: -33px;
+      top: 11px;
+      width: 24.922px;
+      height: 40px;
+    }
+  }
+  &::after {
+    content: "";
+    width: 33px;
+    height: 53px;
+    position: absolute;
+    background: url(/img/icon-title-deco_right.png) no-repeat center center / cover;
+    right: -48px;
+    top: 1px;
+    @include mq("md") {
+      top: 30px;
+    }
+    @include mq("sm") {
+      width: 24.906px;
+      height: 40px;
+      right: -33px;
+      top: 11px;
+    }
+  }
+  p {
+    font-size: 32px;
+    line-height: 170%; /* 54.4px */
+    letter-spacing: 0.96px;
+    @include mq("sm") {
+      font-size: 24px;
+      line-height: 130%; /* 31.2px */
+      letter-spacing: -0.72px;
+    }
+  }
+  span {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 170%;
+    letter-spacing: 0.96px;
+    @include mq("sm") {
+      font-size: 24px;
+      line-height: 130%;
+      letter-spacing: -0.72px;
+    }
+  }
+}
+
+.p-cta-02__main {
+  margin-top: 41.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 49px;
+  @include mq("sm") {
+    margin-top: 63.5px;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.p-cta-02__btn-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  @include mq("sm") {
+    gap: 8px;
+  }
+}
+
+.p-cta-02__btn__label {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 170%; /* 40.8px */
+  letter-spacing: 0.72px;
+  position: relative;
+  @include mq("md") {
+    font-size: 18px;
+  }
+
+  @include mq("sm") {
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.1px;
+  }
+  &::before {
+    content: "";
+    width: 10px;
+    height: 25px;
+    background: url(/img/cta02-label-deco--left.svg) no-repeat center center/cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -17px;
+  }
+  &::after {
+    content: "";
+    width: 10px;
+    height: 25px;
+    background: url(/img/cta02-label-deco--right.svg) no-repeat center center/cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -17px;
+  }
+}
+
+.p-cta-02__btn__label--01 {
+  margin-left: 7px;
+  @include mq("sm") {
+    margin-left: 0;
+  }
+}
+
+.p-cta-02__btn__label--02 {
+  margin-left: -19px;
+  @include mq("sm") {
+    margin-left: 0;
+  }
+}
+
+.p-cta-02__btn {
+  width: 400px;
+  @include mq("md") {
+    width: 250px;
+  }
+  @include mq("sm") {
+    width: 300px;
+  }
+  a {
+    display: flex;
+    padding: 20px 0 24px 0;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 52.404px;
+    background: $color-accent_01;
+    box-shadow: 0px 0px 3px 0px rgba(83, 46, 37, 0.25);
+    transition: all 0.3s ease;
+
+    @include mq("sm") {
+      padding: 11px 35.5px 13px 35.5px;
+      width: 100%;
+    }
+  }
+
+  p {
+    color: var(--White, #fff);
+    font-family: "Noto Sans JP";
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    letter-spacing: -0.1px;
+    padding-right: 17px;
+    transition: all 0.3s ease;
+
+    @include mq("md") {
+      font-size: 20px;
+    }
+
+    @include mq("sm") {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: normal;
+    }
+    &::before {
+      content: "";
+      width: 20.587px;
+      height: 20.587px;
+      background: url(/img/btn-arrow-white.svg) no-repeat center center/cover;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      right: -8px;
+      transition: all 0.3s ease;
+    }
+    &::after {
+      content: "";
+      width: 20.587px;
+      height: 20.587px;
+      background: url(/img/btn-arrow-pink.svg) no-repeat center center/cover;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      right: -8px;
+      transition: all 0.3s ease;
+    }
+  }
+  span {
+    color: var(--White, #fff);
+    font-size: 28.073px;
+    font-weight: 700;
+    line-height: normal;
+    transition: all 0.3s ease;
+
+    @include mq("md") {
+      font-size: 18px;
+    }
+    @include mq("sm") {
+      font-size: 20px;
+    }
+  }
+}
+
+.p-cta-02__btn:hover a {
+  background: $bg-primary;
+}
+.p-cta-02__btn:hover a p {
+  color: $color-accent_01;
+}
+.p-cta-02__btn:hover a span {
+  color: $color-accent_01;
+}
+.p-cta-02__btn:hover a::before {
+  opacity: 0;
+}
+.p-cta-02__btn:hover a::after {
+  opacity: 1;
+}
+
+.p-cta-02-img {
+  width: 11.666666vw;
+  position: absolute;
+  left: calc(50% + 32.986111vw);
+  bottom: -51px;
+  @include mq("sm") {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78px;
+    bottom: -40px;
+  }
+}

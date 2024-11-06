@@ -1,0 +1,7 @@
+// ブレークポイント
+$breakpoints: (
+  "sm": "(width < #{$sm-width})",
+  "md": "(#{$sm-width} <= width < #{$lg-width})",
+  "lg": "(#{$lg-width} <= width < #{$inner-width})",
+  "xl": "(width >= #{$inner-width})"
+);
